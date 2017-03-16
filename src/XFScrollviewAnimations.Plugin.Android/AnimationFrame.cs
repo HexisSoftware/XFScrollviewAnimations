@@ -1,10 +1,14 @@
 ﻿using System;
-namespace Plugin.XFScrollviewAnimations
+using System.Drawing;
+using Android.Views;
+using XFScrollviewAnimations.Plugin.Abstractions;
+
+namespace XFScrollviewAnimations.Plugin
 {
-	public class AnimationFrame
+	public class AnimationFrame : AnimationFrameBase
 	{
-		public AnimationFrame()
-		{
-		}
+		public RectangleF Frame = new RectangleF();
+		public ViewStates Visibility;
+		public Android.Graphics.Color Color;
 	}
 }

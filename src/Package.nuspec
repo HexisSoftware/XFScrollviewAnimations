@@ -12,7 +12,7 @@
     <description>Package description</description>
     <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
     <copyright>Copyright 2016</copyright>
-       <tags>xamarin, xamarin.forms, android, ios, windows phone, jazzhands, animation</tags>
+       <tags>xamarin, xamarin.forms, android, ios, windows phone, ScrollViewAnimations, animation</tags>
     <dependencies>
         <group targetFramework="net">
             </group>
@@ -39,35 +39,35 @@
 
     <files>
      <!--Core-->
-     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/Plugin.XFScrollviewAnimations.Abstractions.dll" target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.XFScrollviewAnimations.Abstractions.dll" />
-     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/Plugin.XFScrollviewAnimations.Abstractions.xml" target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.XFScrollviewAnimations.Abstractions.xml" />
-     <file src="XFScrollviewAnimations.Plugin/bin/Release/Plugin.XFScrollviewAnimations.dll" target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.XFScrollviewAnimations.dll" />
-     <file src="XFScrollviewAnimations.Plugin/bin/Release/Plugin.XFScrollviewAnimations.xml" target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.XFScrollviewAnimations.xml" />
+     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/XFScrollviewAnimations.Plugin.Abstractions.dll" target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\XFScrollviewAnimations.Plugin.Abstractions.dll" />
+     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/XFScrollviewAnimations.Plugin.Abstractions.xml" target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\XFScrollviewAnimations.Plugin.Abstractions.xml" />
+     <file src="XFScrollviewAnimations.Plugin/bin/Release/XFScrollviewAnimations.Plugin.dll" target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\XFScrollviewAnimations.Plugin.dll" />
+     <file src="XFScrollviewAnimations.Plugin/bin/Release/XFScrollviewAnimations.Plugin.xml" target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\XFScrollviewAnimations.Plugin.xml" />
  
      <!--Xamarin.Android-->
-     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/Plugin.XFScrollviewAnimations.Abstractions.dll" target="lib\MonoAndroid10\Plugin.XFScrollviewAnimations.Abstractions.dll" />
-     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/Plugin.XFScrollviewAnimations.Abstractions.xml" target="lib\MonoAndroid10\Plugin.XFScrollviewAnimations.Abstractions.xml" />
-     <file src="XFScrollviewAnimations.Plugin.Android/bin/Release/Plugin.XFScrollviewAnimations.dll" target="lib\MonoAndroid10\Plugin.XFScrollviewAnimations.dll" />
-     <file src="XFScrollviewAnimations.Plugin.Android/bin/Release/Plugin.XFScrollviewAnimations.xml" target="lib\MonoAndroid10\Plugin.XFScrollviewAnimations.xml" />
+     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/XFScrollviewAnimations.Plugin.Abstractions.dll" target="lib\MonoAndroid10\XFScrollviewAnimations.Plugin.Abstractions.dll" />
+     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/XFScrollviewAnimations.Plugin.Abstractions.xml" target="lib\MonoAndroid10\XFScrollviewAnimations.Plugin.Abstractions.xml" />
+     <file src="XFScrollviewAnimations.Plugin.Android/bin/Release/XFScrollviewAnimations.Plugin.dll" target="lib\MonoAndroid10\XFScrollviewAnimations.Plugin.dll" />
+     <file src="XFScrollviewAnimations.Plugin.Android/bin/Release/XFScrollviewAnimations.Plugin.xml" target="lib\MonoAndroid10\XFScrollviewAnimations.Plugin.xml" />
      
      <!--Xamarin.iOS-->
-     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/Plugin.XFScrollviewAnimations.Abstractions.dll" target="lib\MonoTouch10\Plugin.XFScrollviewAnimations.Abstractions.dll" />
-     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/Plugin.XFScrollviewAnimations.Abstractions.xml" target="lib\MonoTouch10\Plugin.XFScrollviewAnimations.Abstractions.xml" />
-     <file src="XFScrollviewAnimations.Plugin.iOS/bin/iPhone/Release/Plugin.XFScrollviewAnimations.dll" target="lib\MonoTouch10\Plugin.XFScrollviewAnimations.dll" />
-     <file src="XFScrollviewAnimations.Plugin.iOS/bin/iPhone/Release/Plugin.XFScrollviewAnimations.xml" target="lib\MonoTouch10\Plugin.XFScrollviewAnimations.xml" />
+     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/XFScrollviewAnimations.Plugin.Abstractions.dll" target="lib\MonoTouch10\XFScrollviewAnimations.Plugin.Abstractions.dll" />
+     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/XFScrollviewAnimations.Plugin.Abstractions.xml" target="lib\MonoTouch10\XFScrollviewAnimations.Plugin.Abstractions.xml" />
+     <file src="XFScrollviewAnimations.Plugin.iOS/bin/iPhone/Release/XFScrollviewAnimations.Plugin.dll" target="lib\MonoTouch10\XFScrollviewAnimations.Plugin.dll" />
+     <file src="XFScrollviewAnimations.Plugin.iOS/bin/iPhone/Release/XFScrollviewAnimations.Plugin.xml" target="lib\MonoTouch10\XFScrollviewAnimations.Plugin.xml" />
 
      <!--Xamarin.iOS Unified-->
-     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/Plugin.XFScrollviewAnimations.Abstractions.dll" target="lib\Xamarin.iOS10\Plugin.XFScrollviewAnimations.Abstractions.dll" />
-     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/Plugin.XFScrollviewAnimations.Abstractions.xml" target="lib\Xamarin.iOS10\Plugin.XFScrollviewAnimations.Abstractions.xml" />
-     <file src="XFScrollviewAnimations.Plugin.iOSUnified/bin/iPhone/Release/Plugin.XFScrollviewAnimations.dll" target="lib\Xamarin.iOS10\Plugin.XFScrollviewAnimations.dll" />
-     <file src="XFScrollviewAnimations.Plugin.iOSUnified/bin/iPhone/Release/Plugin.XFScrollviewAnimations.xml" target="lib\Xamarin.iOS10\Plugin.XFScrollviewAnimations.xml" />
+     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/XFScrollviewAnimations.Plugin.Abstractions.dll" target="lib\Xamarin.iOS10\XFScrollviewAnimations.Plugin.Abstractions.dll" />
+     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/XFScrollviewAnimations.Plugin.Abstractions.xml" target="lib\Xamarin.iOS10\XFScrollviewAnimations.Plugin.Abstractions.xml" />
+     <file src="XFScrollviewAnimations.Plugin.iOSUnified/bin/iPhone/Release/XFScrollviewAnimations.Plugin.dll" target="lib\Xamarin.iOS10\XFScrollviewAnimations.Plugin.dll" />
+     <file src="XFScrollviewAnimations.Plugin.iOSUnified/bin/iPhone/Release/XFScrollviewAnimations.Plugin.xml" target="lib\Xamarin.iOS10\XFScrollviewAnimations.Plugin.xml" />
 
     
       <!--Net 4.5-->
-     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/Plugin.XFScrollviewAnimations.Abstractions.dll" target="lib\net45\Plugin.XFScrollviewAnimations.Abstractions.dll" />
-     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/Plugin.XFScrollviewAnimations.Abstractions.xml" target="lib\net45\Plugin.XFScrollviewAnimations.Abstractions.xml" />
-     <file src="XFScrollviewAnimations.Plugin.Net45/bin/Release/Plugin.XFScrollviewAnimations.dll" target="lib\net45\Plugin.XFScrollviewAnimations.dll" />
-     <file src="XFScrollviewAnimations.Plugin.Net45/bin/Release/Plugin.XFScrollviewAnimations.xml" target="lib\net45\Plugin.XFScrollviewAnimations.xml" />
+     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/XFScrollviewAnimations.Plugin.Abstractions.dll" target="lib\net45\XFScrollviewAnimations.Plugin.Abstractions.dll" />
+     <file src="XFScrollviewAnimations.Plugin.Abstractions/bin/Release/XFScrollviewAnimations.Plugin.Abstractions.xml" target="lib\net45\XFScrollviewAnimations.Plugin.Abstractions.xml" />
+     <file src="XFScrollviewAnimations.Plugin.Net45/bin/Release/XFScrollviewAnimations.Plugin.dll" target="lib\net45\XFScrollviewAnimations.Plugin.dll" />
+     <file src="XFScrollviewAnimations.Plugin.Net45/bin/Release/XFScrollviewAnimations.Plugin.xml" target="lib\net45\XFScrollviewAnimations.Plugin.xml" />
     
 
    </files>

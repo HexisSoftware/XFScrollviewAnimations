@@ -6,7 +6,7 @@ namespace XFScrollviewAnimations.Plugin
     /// <summary>
     /// Vibration implemenation on Windows Store
     /// </summary>
-    public class JazzHands : IJazzHands
+    public class ScrollViewAnimations : IScrollViewAnimations
   {
     /// <summary>
     /// Vibration (no effect windows store)

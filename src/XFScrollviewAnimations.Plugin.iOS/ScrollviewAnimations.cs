@@ -12,7 +12,7 @@ namespace XFScrollviewAnimations.Plugin
 	/// <summary>
 	/// iOS implementation to handle scrollview and view animations
 	/// </summary>
-	public class JazzHands : IXFScrollviewAnimations
+	public class ScrollViewAnimations : IXFScrollviewAnimations
 	{
 		/// <summary>
 		/// Set of all animations
@@ -27,7 +27,9 @@ namespace XFScrollviewAnimations.Plugin
 
 			CGRect nativeViewSize = new CGRect(view.X, view.Y, view.Width, view.Height);
 			UIView nativeView = ConvertFormsToNative(view, nativeViewSize);
-			nativeView.Alpha = animationFrame.Alpha;
+
+			AnimationFrame animationFrameAlpha = Animation.AnimationFrameForTime(time) as AnimationFrame;
+			nativeView.Alpha = animationFrameAlpha.Alpha;
 		}
 
 		public void AngleAnimation(CustomView view, int time)
@@ -37,7 +39,10 @@ namespace XFScrollviewAnimations.Plugin
 
 			CGRect nativeViewSize = new CGRect(view.X, view.Y, view.Width, view.Height);
 			UIView nativeView = ConvertFormsToNative(view, nativeViewSize);
-			nativeView.Transform = CGAffineTransform.MakeRotation(animationFrame.Angle);
+
+
+			var animationFrameAngle = Animation.AnimationFrameForTime(time);
+			nativeView.Transform = CGAffineTransform.MakeRotation(animationFrameAngle.Angle);
 		}
 
 		public void Transform3DAnimation(CustomView view, int time)
@@ -101,7 +106,7 @@ namespace XFScrollviewAnimations.Plugin
 			AnimationFrame animationFrameTranform = Animation.AnimationFrameForTime(time) as AnimationFrame;
 
 			// Store the current transform
-			CGAffineTransform tempTransform = View.Transform;
+			CGAffineTransform tempTransform = nativeView.Transform;
 
 			// Reset rotation to 0 to avoid warping
 			nativeView.Transform = CGAffineTransform.MakeRotation(0);

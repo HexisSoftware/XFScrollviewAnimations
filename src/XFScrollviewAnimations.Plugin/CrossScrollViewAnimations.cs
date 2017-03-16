@@ -6,7 +6,7 @@ namespace XFScrollviewAnimations.Plugin
     /// <summary>
     /// 
     /// </summary>
-    public static class CrossJazzHands
+    public static class CrossScrollViewAnimations
     {
 		static Lazy<IXFScrollviewAnimations> TTS = new Lazy<IXFScrollviewAnimations>(() => CreateAnimation(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
 
@@ -31,7 +31,7 @@ namespace XFScrollviewAnimations.Plugin
 		#if PORTABLE
 		            return null;
 		#else
-		            return new JazzHands();
+		            return new ScrollViewAnimations();
 		#endif
         }
 

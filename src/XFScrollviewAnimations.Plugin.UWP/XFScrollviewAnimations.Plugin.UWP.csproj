@@ -7,8 +7,8 @@
     <ProjectGuid>{CC294F69-2513-455C-9B2D-547E4C01D1A6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Plugin.XFScrollviewAnimations</RootNamespace>
-    <AssemblyName>Plugin.XFScrollviewAnimations</AssemblyName>
+    <RootNamespace>XFScrollviewAnimations.Plugin</RootNamespace>
+    <AssemblyName>XFScrollviewAnimations.Plugin</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
@@ -35,7 +35,7 @@
     <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\Plugin.XFScrollviewAnimations.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\XFScrollviewAnimations.Plugin.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <PlatformTarget>ARM</PlatformTarget>
@@ -102,19 +102,19 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
-    <DocumentationFile>bin\Release\Plugin.XFScrollviewAnimations.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\XFScrollviewAnimations.Plugin.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\XFScrollviewAnimations.Plugin\CrossJazzHands.cs">
-      <Link>CrossJazzHands.cs</Link>
+    <Compile Include="..\XFScrollviewAnimations.Plugin\CrossScrollViewAnimations.cs">
+      <Link>CrossScrollViewAnimations.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="JazzHands.cs" />
-    <Content Include="Properties\Plugin.XFScrollviewAnimations.rd.xml" />
+    <Compile Include="ScrollViewAnimations.cs" />
+    <Content Include="Properties\XFScrollviewAnimations.Plugin.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XFScrollviewAnimations.Plugin.Abstractions\XFScrollviewAnimations.Plugin.Abstractions.csproj">

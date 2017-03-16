@@ -6,7 +6,7 @@ namespace XFScrollviewAnimations.Plugin.Abstractions
 {
 
     /// <summary>
-    /// Interface for JazzHands PCL Animations
+    /// Interface for ScrollViewAnimations PCL Animations
     /// </summary>
     public interface IXFScrollviewAnimations
 	{

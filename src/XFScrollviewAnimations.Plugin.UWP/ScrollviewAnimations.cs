@@ -4,7 +4,7 @@ using Windows.Foundation.Metadata;
 
 namespace XFScrollviewAnimations.Plugin
 {
-    public class JazzHands : IJazzHands
+    public class ScrollViewAnimations : IScrollViewAnimations
     {
         public void Vibration(int milliseconds = 500)
         {

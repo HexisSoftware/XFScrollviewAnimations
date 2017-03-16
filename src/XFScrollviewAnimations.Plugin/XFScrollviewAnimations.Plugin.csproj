@@ -8,8 +8,8 @@
     <ProjectGuid>{E018DEDF-8FB8-4D46-A04B-97C9447965F5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Plugin.XFScrollviewAnimations</RootNamespace>
-    <AssemblyName>Plugin.XFScrollviewAnimations</AssemblyName>
+    <RootNamespace>XFScrollviewAnimations.Plugin</RootNamespace>
+    <AssemblyName>XFScrollviewAnimations.Plugin</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -31,13 +31,13 @@
     <DefineConstants>TRACE;PORTABLE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\Plugin.XFScrollviewAnimations.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\XFScrollviewAnimations.Plugin.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CrossJazzHands.cs" />
+    <Compile Include="CrossScrollViewAnimations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

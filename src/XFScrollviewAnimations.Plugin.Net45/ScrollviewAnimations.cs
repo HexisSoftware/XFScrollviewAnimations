@@ -6,7 +6,7 @@ namespace XFScrollviewAnimations.Plugin
     /// <summary>
     /// Implementation to vibrate device
     /// </summary>
-    public class JazzHands : IJazzHands
+    public class ScrollViewAnimations : IScrollViewAnimations
     {
         /// <summary>
         /// Vibrate device with default length

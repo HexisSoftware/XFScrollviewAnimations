@@ -15,7 +15,7 @@ namespace XFScrollviewAnimations.Plugin
     /// <summary>
     /// Windows Phone implemenation of Vibrate
     /// </summary>
-    public class JazzHands : IJazzHands
+    public class ScrollViewAnimations : IScrollViewAnimations
     {
 
         /// <summary>
