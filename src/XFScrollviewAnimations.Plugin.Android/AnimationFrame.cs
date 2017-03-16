@@ -1,9 +1,9 @@
 ﻿using System;
 namespace Plugin.XFScrollviewAnimations
 {
-	public class CustomViewDroidRenderer
+	public class AnimationFrame
 	{
-		public CustomViewDroidRenderer()
+		public AnimationFrame()
 		{
 		}
 	}
