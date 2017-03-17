@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFScrollviewAnimations.Plugin.Abstractions", "XFScrollviewAnimations.Plugin.Abstractions\XFScrollviewAnimations.Plugin.Abstractions.csproj", "{E0A73AEB-607F-443E-9529-4173FE690A16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.XFScrollviewAnimations.Abstractions", "Plugin.XFScrollviewAnimations.Abstractions\Plugin.XFScrollviewAnimations.Abstractions.csproj", "{E0A73AEB-607F-443E-9529-4173FE690A16}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{A3A9DD8D-9E91-47BD-8ADD-E950BC0EE506}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,23 +14,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{A3A9DD8D-9
 		..\Component\component.template.yaml = ..\Component\component.template.yaml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFScrollviewAnimations.Plugin.iOS", "XFScrollviewAnimations.Plugin.iOS\XFScrollviewAnimations.Plugin.iOS.csproj", "{B79FF39A-5930-4F5C-9138-FD081D438D28}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.XFScrollviewAnimations.iOS", "Plugin.XFScrollviewAnimations.iOS\Plugin.XFScrollviewAnimations.iOS.csproj", "{B79FF39A-5930-4F5C-9138-FD081D438D28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFScrollviewAnimations.Plugin.iOSUnified", "XFScrollviewAnimations.Plugin.iOSUnified\XFScrollviewAnimations.Plugin.iOSUnified.csproj", "{A6B81057-0668-4931-A605-84F7AC1CA937}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.XFScrollviewAnimations.iOSUnified", "Plugin.XFScrollviewAnimations.iOSUnified\Plugin.XFScrollviewAnimations.iOSUnified.csproj", "{A6B81057-0668-4931-A605-84F7AC1CA937}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFScrollviewAnimations.Plugin.WinPhoneRT", "XFScrollviewAnimations.Plugin.WinPhoneRT\XFScrollviewAnimations.Plugin.WinPhoneRT.csproj", "{E88F2DC0-AFCB-4D34-8F5D-E0B6BA54282B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.XFScrollviewAnimations.WinPhoneRT", "Plugin.XFScrollviewAnimations.WinPhoneRT\Plugin.XFScrollviewAnimations.WinPhoneRT.csproj", "{E88F2DC0-AFCB-4D34-8F5D-E0B6BA54282B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFScrollviewAnimations.Plugin.WinPhone", "XFScrollviewAnimations.Plugin.WinPhone\XFScrollviewAnimations.Plugin.WinPhone.csproj", "{9606B619-FC46-4512-A5AC-97B4B4A0FB60}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.XFScrollviewAnimations.WinPhone", "Plugin.XFScrollviewAnimations.WinPhone\Plugin.XFScrollviewAnimations.WinPhone.csproj", "{9606B619-FC46-4512-A5AC-97B4B4A0FB60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFScrollviewAnimations.Plugin.Android", "XFScrollviewAnimations.Plugin.Android\XFScrollviewAnimations.Plugin.Android.csproj", "{3C98C724-1797-4991-9AF2-969A337465DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.XFScrollviewAnimations.Android", "Plugin.XFScrollviewAnimations.Android\Plugin.XFScrollviewAnimations.Android.csproj", "{3C98C724-1797-4991-9AF2-969A337465DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFScrollviewAnimations.Plugin.WinStore", "XFScrollviewAnimations.Plugin.WinStore\XFScrollviewAnimations.Plugin.WinStore.csproj", "{6065BE34-A624-42AA-ABF3-FA4D7E2DE662}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.XFScrollviewAnimations.WinStore", "Plugin.XFScrollviewAnimations.WinStore\Plugin.XFScrollviewAnimations.WinStore.csproj", "{6065BE34-A624-42AA-ABF3-FA4D7E2DE662}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFScrollviewAnimations.Plugin.UWP", "XFScrollviewAnimations.Plugin.UWP\XFScrollviewAnimations.Plugin.UWP.csproj", "{CC294F69-2513-455C-9B2D-547E4C01D1A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.XFScrollviewAnimations.UWP", "Plugin.XFScrollviewAnimations.UWP\Plugin.XFScrollviewAnimations.UWP.csproj", "{CC294F69-2513-455C-9B2D-547E4C01D1A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFScrollviewAnimations.Plugin.Net45", "XFScrollviewAnimations.Plugin.Net45\XFScrollviewAnimations.Plugin.Net45.csproj", "{6A10F33D-B299-4E93-BD04-385196342845}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.XFScrollviewAnimations.Net45", "Plugin.XFScrollviewAnimations.Net45\Plugin.XFScrollviewAnimations.Net45.csproj", "{6A10F33D-B299-4E93-BD04-385196342845}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFScrollviewAnimations.Plugin", "XFScrollviewAnimations.Plugin\XFScrollviewAnimations.Plugin.csproj", "{E018DEDF-8FB8-4D46-A04B-97C9447965F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.XFScrollviewAnimations", "Plugin.XFScrollviewAnimations\Plugin.XFScrollviewAnimations.csproj", "{E018DEDF-8FB8-4D46-A04B-97C9447965F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
