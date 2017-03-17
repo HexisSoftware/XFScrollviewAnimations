@@ -5,11 +5,11 @@ var TARGET = Argument ("target", Argument ("t", "Default"));
 var version = EnvironmentVariable ("APPVEYOR_BUILD_VERSION") ?? Argument("version", "0.0.9999");
 
 var libraries = new Dictionary<string, string> {
- 	{ "./src/Vibrate.sln", "Any" },
+ 	{ "./src/XFScrollviewAnimations.sln", "Any" },
 };
 
 var samples = new Dictionary<string, string> {
-	{ "./samples/VibrateSample.sln", "Win" },
+	{ "./samples/XFScrollviewAnimations.Sample.sln", "Win" },
 };
 
 var BuildAction = new Action<Dictionary<string, string>> (solutions =>

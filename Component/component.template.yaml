@@ -1,48 +1,48 @@
 %YAML 1.2
 ---
 version: {VERSION}
-name: Vibrate Plugin
-id: VibratePlugin
-publisher: James Montemagno
+name: Scrollview Animations
+id: ScrollviewAnimations
+publisher: Samuel Bezerra Gomes
 license: License.md
 skip_docs: true
 icons: 
-  - VibratePlugin_128x128.png
-  - VibratePlugin_512x512.png
-publisher-url: http://www.github.com/jamesmontemagno/VibratePlugin
+  - XFScrollviewAnimations_128x128.png
+  - XFScrollviewAnimations_256x256
+publisher-url: http://github.com/HexisSoftware/XFScrollviewAnimations
 is_shell: true
 packages:
-  ios: Xam.Plugins.Vibrate, Version={VERSION}
-  ios-unified: Xam.Plugins.Vibrate, Version={VERSION}
-  android: Xam.Plugins.Vibrate, Version={VERSION}
-  winphone-8.0: Xam.Plugins.Vibrate, Version={VERSION}
-  winphone-8.1: Xam.Plugins.Vibrate, Version={VERSION}
-  winuniversal-10.0: Xam.Plugins.Vibrate, Version={VERSION}
-summary: Easily access the vibrate feature of any device.
+  ios: HexisSoftware.Plugins.XFScrollviewAnimations, Version={VERSION}
+  ios-unified: HexisSoftware.Plugins.XFScrollviewAnimations, Version={VERSION}
+  android: HexisSoftware.Plugins.XFScrollviewAnimations, Version={VERSION}
+  winphone-8.0: HexisSoftware.Plugins.XFScrollviewAnimations, Version={VERSION}
+  winphone-8.1: HexisSoftware.Plugins.XFScrollviewAnimations, Version={VERSION}
+  winuniversal-10.0: HexisSoftware.Plugins.XFScrollviewAnimations, Version={VERSION}
+summary: Create Scrollview Animations for Xamarin.Forms
 details: Details.md
 getting-started: GettingStarted.md
 samples: 
   - name: Vibrate Samples (iOS, Android, and Windows)
     path: "../Samples/VibrateSample.sln"
     removeProjects: 
-      - Plugin.Vibrate
-      - Plugin.Vibrate.Abstractions
-      - Plugin.Vibrate.Android
-      - Plugin.Vibrate.iOSUnified
-      - Plugin.Vibrate.WinPhone
+      - XFScrollviewAnimations.Plugin
+      - XFScrollviewAnimations.Plugin.Abstractions
+      - XFScrollviewAnimations.Plugin.Android
+      - XFScrollviewAnimations.Plugin.iOSUnified
+      - XFScrollviewAnimations.Plugin.WinPhone
     installNuGets:
       - project: VibrateSample
         packages: 
-          - Xam.Plugins.Vibrate
+          - HexisSoftware.Plugins.XFScrollviewAnimations
       - project: VibrateSample.iOS
         packages: 
-          - Xam.Plugins.Vibrate
+          - HexisSoftware.Plugins.XFScrollviewAnimations
       - project: VibrateSample.Droid
         packages: 
-          - Xam.Plugins.Vibrate
+          - HexisSoftware.Plugins.XFScrollviewAnimations
       - project: VibrateSample.WinPhone
         packages: 
-          - Xam.Plugins.Vibrate
+          - HexisSoftware.Plugins.XFScrollviewAnimations
     no_build: true
     skip_docs: true  
 local-nuget-repo: ../Build/nuget

@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 // Information about this assembly is defined by the following attributes.
 // Change them to the values specific to your project.
 
-[assembly: AssemblyTitle("XFScrollviewAnimations.Plugin.Net45")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("XFScrollviewAnimations.Plugin")]
+[assembly: AssemblyDescription("XFScrollviewAnimations.Plugin Description")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Refractored LLC")]
-[assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("Refractored LLC / Samuel Bezerra Gomes")]
+[assembly: AssemblyCompany("Hexis Software")]
+[assembly: AssemblyProduct("XFScrollviewAnimations.Plugin")]
+[assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

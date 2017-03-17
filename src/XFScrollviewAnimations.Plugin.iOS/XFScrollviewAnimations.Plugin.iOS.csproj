@@ -10,6 +10,7 @@
     <AssemblyName>XFScrollviewAnimations.Plugin</AssemblyName>
     <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,8 +42,8 @@
     <Compile Include="ScrollViewAnimations.cs" />
     <Compile Include="AnimationFrame.cs" />
     <Compile Include="Transform3D.cs" />
-    <Compile Include="Renderers\CustomScrollViewiOSRenderer.cs" />
-    <Compile Include="Renderers\CustomViewiOSRenderer.cs" />
+    <Compile Include="Renderers\AnimatedScrollViewiOSRenderer.cs" />
+    <Compile Include="Renderers\AnimatedViewiOSRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

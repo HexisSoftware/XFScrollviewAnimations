@@ -15,13 +15,13 @@ namespace XFScrollviewAnimations.Plugin.Abstractions
 		/// </summary>
 		/// <returns>animationFrame</returns>
 		/// <param name="time">time</param>	
-		void AlphaAnimation(CustomView view, int time);
-		void AngleAnimation(CustomView view, int time);
-		void ColorAnimation(CustomView view, int time);
-		void TransformAnimation(CustomView view, int time);
-		void Transform3DAnimation(CustomView view, int time);
-		void HideAnimation(CustomView view, int time);
-		void ScaleAnimation(CustomView view, int time);
+		void AlphaAnimation(AnimatedView view, int time);
+		void AngleAnimation(AnimatedView view, int time);
+		void ColorAnimation(AnimatedView view, int time);
+		void TransformAnimation(AnimatedView view, int time);
+		void Transform3DAnimation(AnimatedView view, int time);
+		void HideAnimation(AnimatedView view, int time);
+		void ScaleAnimation(AnimatedView view, int time);
 
 		/// <summary>
 		/// Frames for time.
@@ -34,7 +34,7 @@ namespace XFScrollviewAnimations.Plugin.Abstractions
 		AnimationFrameBase FrameForTimeAngle(int time, AnimationFrameBase startKeyFrame, AnimationFrameBase endKeyFrame);
 		AnimationFrameBase FrameForTime3D(int time, AnimationFrameBase startKeyFrame, AnimationFrameBase endKeyFrame);
 		AnimationFrameBase FrameForTimeColor(int time, AnimationFrameBase startKeyFrame, AnimationFrameBase endKeyFrame);
-		AnimationFrameBase FrameForTimeTransform(CustomView view, int time, AnimationFrameBase startKeyFrame, AnimationFrameBase endKeyFrame);
+		AnimationFrameBase FrameForTimeTransform(AnimatedView view, int time, AnimationFrameBase startKeyFrame, AnimationFrameBase endKeyFrame);
 		AnimationFrameBase FrameForTimeHide(int time, AnimationFrameBase startKeyFrame, AnimationFrameBase endKeyFrame);
 		AnimationFrameBase FrameForTimeScale(int time, AnimationFrameBase startKeyFrame, AnimationFrameBase endKeyFrame);
 
