@@ -18,11 +18,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.XFScrollviewAnimatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.XFScrollviewAnimations.iOSUnified", "Plugin.XFScrollviewAnimations.iOSUnified\Plugin.XFScrollviewAnimations.iOSUnified.csproj", "{A6B81057-0668-4931-A605-84F7AC1CA937}"
 EndProject
-<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFScrollviewAnimations.Plugin.Android", "XFScrollviewAnimations.Plugin.Android\XFScrollviewAnimations.Plugin.Android.csproj", "{3C98C724-1797-4991-9AF2-969A337465DE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFScrollviewAnimations.Plugin.Net45", "XFScrollviewAnimations.Plugin.Net45\XFScrollviewAnimations.Plugin.Net45.csproj", "{6A10F33D-B299-4E93-BD04-385196342845}"
-=======
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.XFScrollviewAnimations.WinPhoneRT", "Plugin.XFScrollviewAnimations.WinPhoneRT\Plugin.XFScrollviewAnimations.WinPhoneRT.csproj", "{E88F2DC0-AFCB-4D34-8F5D-E0B6BA54282B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.XFScrollviewAnimations.WinPhone", "Plugin.XFScrollviewAnimations.WinPhone\Plugin.XFScrollviewAnimations.WinPhone.csproj", "{9606B619-FC46-4512-A5AC-97B4B4A0FB60}"
@@ -34,7 +32,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.XFScrollviewAnimations.UWP", "Plugin.XFScrollviewAnimations.UWP\Plugin.XFScrollviewAnimations.UWP.csproj", "{CC294F69-2513-455C-9B2D-547E4C01D1A6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.XFScrollviewAnimations.Net45", "Plugin.XFScrollviewAnimations.Net45\Plugin.XFScrollviewAnimations.Net45.csproj", "{6A10F33D-B299-4E93-BD04-385196342845}"
->>>>>>> 173297244e5558a6f3b1896ba3a104449eba8c55
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.XFScrollviewAnimations", "Plugin.XFScrollviewAnimations\Plugin.XFScrollviewAnimations.csproj", "{E018DEDF-8FB8-4D46-A04B-97C9447965F5}"
 EndProject
