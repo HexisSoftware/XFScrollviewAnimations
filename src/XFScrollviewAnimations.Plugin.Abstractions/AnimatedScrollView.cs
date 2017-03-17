@@ -7,11 +7,11 @@ namespace XFScrollviewAnimations.Plugin.Abstractions
 	{
 		private static int _defaultPageNumber = 1;
 
-		public static readonly BindableProperty PageNumberProperty = BindableProperty.Create(nameof(PageNumber), typeof(int), typeof(AnimatedScrollView), _defaultPageNumber);
-		public int PageNumber
+		public static readonly BindableProperty NumberOfPageProperty = BindableProperty.Create(nameof(NumberOfPage), typeof(int), typeof(AnimatedScrollView), _defaultPageNumber);
+		public int NumberOfPage
 		{
-			get { return (int)GetValue(PageNumberProperty); }
-			set { SetValue(PageNumberProperty, value); }
+			get { return (int)GetValue(NumberOfPageProperty); }
+			set { SetValue(NumberOfPageProperty, value); }
 		}
 	}
 }

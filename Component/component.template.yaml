@@ -12,12 +12,21 @@ icons:
 publisher-url: http://github.com/HexisSoftware/XFScrollviewAnimations
 is_shell: true
 packages:
+<<<<<<< HEAD
   ios: HexisSoftware.Plugins.XFScrollviewAnimations, Version={VERSION}
   ios-unified: HexisSoftware.Plugins.XFScrollviewAnimations, Version={VERSION}
   android: HexisSoftware.Plugins.XFScrollviewAnimations, Version={VERSION}
   winphone-8.0: HexisSoftware.Plugins.XFScrollviewAnimations, Version={VERSION}
   winphone-8.1: HexisSoftware.Plugins.XFScrollviewAnimations, Version={VERSION}
   winuniversal-10.0: HexisSoftware.Plugins.XFScrollviewAnimations, Version={VERSION}
+=======
+  ios: Xam.Plugins.Vibrate, Version={VERSION}
+  ios-unified: Xam.Plugins.Vibrate, Version={VERSION}
+  android: Xam.Plugins.Vibrate, Version={VERSION}
+  winphone-8.0: Xam.Plugins.Vibrate, Version={VERSION}
+  winphone-8.1: Xam.Plugins.Vibrate, Version={VERSION}
+  winuniversal-10.0: Xam.Plugins.Vibrate, Version={VERSION}
+>>>>>>> 173297244e5558a6f3b1896ba3a104449eba8c55
 summary: Create Scrollview Animations for Xamarin.Forms
 details: Details.md
 getting-started: GettingStarted.md
