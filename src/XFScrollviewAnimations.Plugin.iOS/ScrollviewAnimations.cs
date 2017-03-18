@@ -20,7 +20,7 @@ namespace XFScrollviewAnimations.Plugin
 		/// <param name="view">View.</param>
 		/// <param name="time">Time.</param>
 		/// 
-		public void AlphaAnimation(CustomView view, int time)
+		public void AlphaAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
 			if (animationFrame == null) return;
@@ -32,7 +32,7 @@ namespace XFScrollviewAnimations.Plugin
 			nativeView.Alpha = animationFrameAlpha.Alpha;
 		}
 
-		public void AngleAnimation(CustomView view, int time)
+		public void AngleAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
 			if (animationFrame == null) return;
@@ -45,7 +45,7 @@ namespace XFScrollviewAnimations.Plugin
 			nativeView.Transform = CGAffineTransform.MakeRotation(animationFrameAngle.Angle);
 		}
 
-		public void Transform3DAnimation(CustomView view, int time)
+		public void Transform3DAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
 			if (animationFrame == null) return;
@@ -95,7 +95,7 @@ namespace XFScrollviewAnimations.Plugin
 		}
 
 
-		public void TransformAnimation(CustomView view, int time)
+		public void TransformAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
 			if (animationFrame == null) return;
@@ -116,7 +116,7 @@ namespace XFScrollviewAnimations.Plugin
 			nativeView.Transform = tempTransform;
 		}
 
-		public void ColorAnimation(CustomView view, int time)
+		public void ColorAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
 			if (animationFrame == null) return;
@@ -129,7 +129,7 @@ namespace XFScrollviewAnimations.Plugin
 			nativeView.BackgroundColor = colorAnimationFrame.Color;
 		}
 
-		public void HideAnimation(CustomView view, int time)
+		public void HideAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
 			if (animationFrame == null) return;
@@ -139,7 +139,7 @@ namespace XFScrollviewAnimations.Plugin
 			nativeView.Hidden = animationFrame.Hidden;
 		}
 
-		public void ScaleAnimation(CustomView view, int time)
+		public void ScaleAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
 			if (animationFrame == null) return;
@@ -297,7 +297,7 @@ namespace XFScrollviewAnimations.Plugin
 
 
 
-		public AnimationFrameBase FrameForTimeTransform(CustomView view, int time, AnimationFrameBase startKeyFrameBase, AnimationFrameBase endKeyFrameBase)
+		public AnimationFrameBase FrameForTimeTransform(AnimatedView view, int time, AnimationFrameBase startKeyFrameBase, AnimationFrameBase endKeyFrameBase)
 		{
 			var startKeyFrame = startKeyFrameBase as AnimationFrame;
 			var endKeyFrame = endKeyFrameBase as AnimationFrame;

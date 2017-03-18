@@ -22,7 +22,7 @@ namespace XFScrollviewAnimations.Plugin
 
 		public Android.Views.View nativeView;
 
-		public void AlphaAnimation(CustomView view, int time)
+		public void AlphaAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
 			if (animationFrame == null) return;
@@ -36,7 +36,7 @@ namespace XFScrollviewAnimations.Plugin
 			nativeView.Alpha = animationFrame.Alpha;
 		}
 
-		public void AngleAnimation(CustomView view, int time)
+		public void AngleAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
 			if (animationFrame == null) return;
@@ -49,7 +49,7 @@ namespace XFScrollviewAnimations.Plugin
 			nativeView.Rotation = animationFrame.Angle;
 		}
 
-		public void ColorAnimation(CustomView view, int time)
+		public void ColorAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
 			if (animationFrame == null) return;
@@ -63,7 +63,7 @@ namespace XFScrollviewAnimations.Plugin
 			nativeView.SetBackgroundColor(colorAnimationFrame.Color);
 		}
 
-		public void HideAnimation(CustomView view, int time)
+		public void HideAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
 			if (animationFrame == null) return;
@@ -77,7 +77,7 @@ namespace XFScrollviewAnimations.Plugin
 			nativeView.Visibility = hideAnimationFrame.Visibility;
 		}
 
-		public void ScaleAnimation(CustomView view, int time)
+		public void ScaleAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
 			if (animationFrame == null) return;
@@ -187,12 +187,12 @@ namespace XFScrollviewAnimations.Plugin
 			return animationFrame;
 		}
 
-		public void TransformAnimation(CustomView view, int time)
+		public void TransformAnimation(AnimatedView view, int time)
 		{
 			throw new NotImplementedException();
 		}
 
-		public void Transform3DAnimation(CustomView view, int time)
+		public void Transform3DAnimation(AnimatedView view, int time)
 		{
 			throw new NotImplementedException();
 		}
@@ -202,7 +202,7 @@ namespace XFScrollviewAnimations.Plugin
 			throw new NotImplementedException();
 		}
 
-		public AnimationFrameBase FrameForTimeTransform(CustomView view, int time, AnimationFrameBase startKeyFrame, AnimationFrameBase endKeyFrame)
+		public AnimationFrameBase FrameForTimeTransform(AnimatedView view, int time, AnimationFrameBase startKeyFrame, AnimationFrameBase endKeyFrame)
 		{
 			throw new NotImplementedException();
 		}
