@@ -46,7 +46,7 @@ namespace XFScrollviewAnimations.Plugin
 
 			//Accessing page numbers from the ScrollView abstraction renderer
 			AnimatedScrollView animatedScrollView = (AnimatedScrollView)Element;
-			_pages = animatedScrollView.PageNumber;
+			_pages = animatedScrollView.NumberOfPage;
 
 			nativeScrollView = (UIScrollView)this.NativeView;
 

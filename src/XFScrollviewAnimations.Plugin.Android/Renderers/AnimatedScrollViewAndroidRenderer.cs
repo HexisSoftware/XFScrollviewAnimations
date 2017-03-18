@@ -57,9 +57,8 @@ namespace XFScrollviewAnimations.Plugin
 		{
 			base.OnElementChanged(e);
 
-
-			AnimatedScrollView animatedScrollView = (AnimatedScrollView)Element;
-			_pages = animatedScrollView.PageNumber;
+			var animatedScrollView = (AnimatedScrollView)Element;
+			_pages = animatedScrollView.NumberOfPage;
 			Pages = _pages;
 
 			_scroller = (HorizontalScrollView)typeof(ScrollViewRenderer)
