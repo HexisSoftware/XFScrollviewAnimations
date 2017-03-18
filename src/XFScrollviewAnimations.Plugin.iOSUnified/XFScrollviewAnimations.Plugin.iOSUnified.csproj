@@ -43,8 +43,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AnimationFrame.cs" />
     <Compile Include="Transform3D.cs" />
-    <Compile Include="Renderers\CustomScrollViewiOSRenderer.cs" />
-    <Compile Include="Renderers\CustomViewiOSRenderer.cs" />
+    <Compile Include="Renderers\AnimatedScrollViewiOSRenderer.cs" />
+    <Compile Include="Renderers\AnimatedViewiOSRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -6,6 +6,7 @@ using XFScrollviewAnimations.Plugin.Abstractions;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
+using CoreGraphics;
 
 [assembly: ExportRenderer(typeof(AnimatedScrollView), typeof(AnimatedScrollViewiOSRenderer))]
 namespace XFScrollviewAnimations.Plugin
@@ -22,6 +23,7 @@ namespace XFScrollviewAnimations.Plugin
 	{
 		public Animator Animator { get; set; }
 		public UIScrollView ScrollView { get; set; }
+		private int _pages;
 
 		public IAnimatedScrollViewController animatedScrolledService;
 
@@ -42,7 +44,20 @@ namespace XFScrollviewAnimations.Plugin
 				return;
 			}
 
+			//Accessing page numbers from the ScrollView abstraction renderer
+			AnimatedScrollView animatedScrollView = (AnimatedScrollView)Element;
+			_pages = animatedScrollView.NumberOfPage;
+
 			nativeScrollView = (UIScrollView)this.NativeView;
+
+
+			nativeScrollView.ContentSize = new CGSize(_pages * (float)this.NativeView.Frame.Width, (float)this.NativeView.Frame.Height);
+
+			//TODO: Put these 2 parameters into the Abstraction renderer
+			nativeScrollView.PagingEnabled = true;
+			nativeScrollView.ShowsHorizontalScrollIndicator = false;
+			//
+
 			_isAtEnd = false;
 			Animator = new Animator();
 
