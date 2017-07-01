@@ -11,6 +11,7 @@
     <AssemblyName>XFScrollViewSample</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,15 +51,19 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.2.3.3.193\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
-    <Reference Include="XFScrollviewAnimations.Plugin.Abstractions">
-      <HintPath>..\packages\HexisSoftware.Plugins.XFScrollviewAnimations.1.0.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\XFScrollviewAnimations.Plugin.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="XFScrollviewAnimations.Plugin">
-      <HintPath>..\packages\HexisSoftware.Plugins.XFScrollviewAnimations.1.0.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\XFScrollviewAnimations.Plugin.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\XFScrollviewAnimations.Plugin.Abstractions\XFScrollviewAnimations.Plugin.Abstractions.csproj">
+      <Project>{E0A73AEB-607F-443E-9529-4173FE690A16}</Project>
+      <Name>XFScrollviewAnimations.Plugin.Abstractions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\XFScrollviewAnimations.Plugin\XFScrollviewAnimations.Plugin.csproj">
+      <Project>{E018DEDF-8FB8-4D46-A04B-97C9447965F5}</Project>
+      <Name>XFScrollviewAnimations.Plugin</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

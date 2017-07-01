@@ -92,7 +92,7 @@
     <Compile Include="ScrollViewAnimations.cs" />
     <Compile Include="Renderers\AnimatedScrollViewAndroidRenderer.cs" />
     <Compile Include="Renderers\AnimatedViewAndroidRenderer.cs" />
-    <Compile Include="AnimationFrame.cs" />
+    <Compile Include="Renderers\AnimationFrameAndroidRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

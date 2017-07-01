@@ -11,7 +11,7 @@ namespace XFScrollviewAnimations.Plugin
 	/// <summary>
 	/// Android implementation to handle scrollview and view animations
 	/// </summary>
-	public class ScrollViewAnimations : IXFScrollviewAnimations
+	public class ScrollViewAnimations : Animation, IXFScrollviewAnimations
 	{
 		/// <summary>
 		/// Set of all animations
@@ -22,10 +22,10 @@ namespace XFScrollviewAnimations.Plugin
 
 		public Android.Views.View nativeView;
 
-		public void AlphaAnimation(AnimatedView view, int time)
+		public Animation AlphaAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
-			if (animationFrame == null) return;
+			if (animationFrame == null) return null;
 
 
             var renderer = Platform.CreateRenderer(view);
@@ -34,12 +34,14 @@ namespace XFScrollviewAnimations.Plugin
 			nativeView = renderer.ViewGroup.RootView;
 
 			nativeView.Alpha = animationFrame.Alpha;
+
+			return this;
 		}
 
-		public void AngleAnimation(AnimatedView view, int time)
+		public Animation AngleAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
-			if (animationFrame == null) return;
+			if (animationFrame == null) return null;
 
 			var renderer = Platform.CreateRenderer(view);
 			Platform.SetRenderer(view, renderer);
@@ -47,12 +49,14 @@ namespace XFScrollviewAnimations.Plugin
 			nativeView = renderer.ViewGroup.RootView;
 
 			nativeView.Rotation = animationFrame.Angle;
+
+			return this;
 		}
 
-		public void ColorAnimation(AnimatedView view, int time)
+		public Animation ColorAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
-			if (animationFrame == null) return;
+			if (animationFrame == null) return null;
 
 			var renderer = Platform.CreateRenderer(view);
 			Platform.SetRenderer(view, renderer);
@@ -61,12 +65,14 @@ namespace XFScrollviewAnimations.Plugin
 
 			AnimationFrame colorAnimationFrame = Animation.AnimationFrameForTime(time) as AnimationFrame;
 			nativeView.SetBackgroundColor(colorAnimationFrame.Color);
+
+			return this;
 		}
 
-		public void HideAnimation(AnimatedView view, int time)
+		public Animation HideAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
-			if (animationFrame == null) return;
+			if (animationFrame == null) return null;
 
 			var renderer = Platform.CreateRenderer(view);
 			Platform.SetRenderer(view, renderer);
@@ -75,12 +81,14 @@ namespace XFScrollviewAnimations.Plugin
 
 			AnimationFrame hideAnimationFrame = Animation.AnimationFrameForTime(time) as AnimationFrame;
 			nativeView.Visibility = hideAnimationFrame.Visibility;
+
+			return this;
 		}
 
-		public void ScaleAnimation(AnimatedView view, int time)
+		public Animation ScaleAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
-			if (animationFrame == null) return;
+			if (animationFrame == null) return null;
 
 			var renderer = Platform.CreateRenderer(view);
 			Platform.SetRenderer(view, renderer);
@@ -90,6 +98,7 @@ namespace XFScrollviewAnimations.Plugin
 			AnimationFrame scaleAnimationFrame = Animation.AnimationFrameForTime(time) as AnimationFrame;
 			float scale = scaleAnimationFrame.Scale;
 			//nativeView.Transform = CGAffineTransform.MakeScale (scale, scale);
+			return this;
 		}
 
 		public AnimationFrameBase FrameForTimeAlpha(int time, AnimationFrameBase startKeyFrame, AnimationFrameBase endKeyFrame)
@@ -187,12 +196,12 @@ namespace XFScrollviewAnimations.Plugin
 			return animationFrame;
 		}
 
-		public void TransformAnimation(AnimatedView view, int time)
+		public Animation TransformAnimation(AnimatedView view, int time)
 		{
 			throw new NotImplementedException();
 		}
 
-		public void Transform3DAnimation(AnimatedView view, int time)
+		public Animation Transform3DAnimation(AnimatedView view, int time)
 		{
 			throw new NotImplementedException();
 		}
@@ -206,5 +215,38 @@ namespace XFScrollviewAnimations.Plugin
 		{
 			throw new NotImplementedException();
 		}
+
+
+        #region IDisposable implementation
+        /// <summary>
+        /// Dispose of class and parent classes
+        /// </summary>
+        public void Dispose()
+		{
+			Dispose(true);
+			GC.SuppressFinalize(this);
+		}
+
+		/// <summary>
+		/// Dispose up
+		/// </summary>
+		private bool disposed = false;
+		/// <summary>
+		/// Dispose method
+		/// </summary>
+		/// <param name="disposing"></param>
+		public virtual void Dispose(bool disposing)
+		{
+			if (!disposed)
+			{
+				if (disposing)
+				{
+					//dispose only
+				}
+
+				disposed = true;
+			}
+		}
+		#endregion
 	}
 }

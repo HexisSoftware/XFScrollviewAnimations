@@ -17,6 +17,7 @@
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
     <AndroidTlsProvider></AndroidTlsProvider>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -81,6 +82,12 @@
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.2.3.3.193\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="XFScrollviewAnimations.Plugin.Abstractions">
+      <HintPath>..\..\packages\HexisSoftware.Plugins.XFScrollviewAnimations.1.0.0\lib\MonoAndroid10\XFScrollviewAnimations.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="XFScrollviewAnimations.Plugin">
+      <HintPath>..\..\packages\HexisSoftware.Plugins.XFScrollviewAnimations.1.0.0\lib\MonoAndroid10\XFScrollviewAnimations.Plugin.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

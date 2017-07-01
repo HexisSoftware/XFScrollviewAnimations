@@ -46,6 +46,8 @@
     <Compile Include="Animator.cs" />
     <Compile Include="Renderers\AnimatedScrollView.cs" />
     <Compile Include="Renderers\AnimatedView.cs" />
+    <Compile Include="Renderers\AnimationFrame.cs" />
+    <Compile Include="Transform3D.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

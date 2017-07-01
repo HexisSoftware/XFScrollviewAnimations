@@ -8,7 +8,7 @@ namespace XFScrollviewAnimations.Plugin
     /// </summary>
     public static class CrossScrollViewAnimations
     {
-		static Lazy<IXFScrollviewAnimations> TTS = new Lazy<IXFScrollviewAnimations>(() => CreateAnimation(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
+		static Lazy<IXFScrollviewAnimations> Implementation = new Lazy<IXFScrollviewAnimations>(() => CreateAnimation(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
 
         /// <summary>
         /// Current settings to use
@@ -17,11 +17,11 @@ namespace XFScrollviewAnimations.Plugin
         {
             get
             {
-                var ret = TTS.Value;
-                /*if (ret == null)
+                var ret = Implementation.Value;
+                if (ret == null)
                 {
                     throw NotImplementedInReferenceAssembly();
-                }*/
+                }
                 return ret;
             }
         }

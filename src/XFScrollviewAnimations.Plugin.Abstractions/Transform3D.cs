@@ -1,9 +1,8 @@
 ﻿using System;
-using Foundation;
 
 namespace XFScrollviewAnimations.Plugin
 {
-	public class Transform3D : NSObject
+	public class Transform3D
 	{
 		public float M34;
 		public Transform3DScale Scale;

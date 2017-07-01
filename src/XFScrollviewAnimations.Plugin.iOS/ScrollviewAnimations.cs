@@ -12,7 +12,7 @@ namespace XFScrollviewAnimations.Plugin
 	/// <summary>
 	/// iOS implementation to handle scrollview and view animations
 	/// </summary>
-	public class ScrollViewAnimations : IXFScrollviewAnimations
+	public class ScrollViewAnimations : Animation, IXFScrollviewAnimations
 	{
 		/// <summary>
 		/// Set of all animations
@@ -20,22 +20,24 @@ namespace XFScrollviewAnimations.Plugin
 		/// <param name="view">View.</param>
 		/// <param name="time">Time.</param>
 		/// 
-		public void AlphaAnimation(AnimatedView view, int time)
+		public Animation AlphaAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
-			if (animationFrame == null) return;
+			if (animationFrame == null) return null;
 
 			CGRect nativeViewSize = new CGRect(view.X, view.Y, view.Width, view.Height);
 			UIView nativeView = ConvertFormsToNative(view, nativeViewSize);
 
 			AnimationFrame animationFrameAlpha = Animation.AnimationFrameForTime(time) as AnimationFrame;
 			nativeView.Alpha = animationFrameAlpha.Alpha;
+
+			return this;
 		}
 
-		public void AngleAnimation(AnimatedView view, int time)
+		public Animation AngleAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
-			if (animationFrame == null) return;
+			if (animationFrame == null) return null;
 
 			CGRect nativeViewSize = new CGRect(view.X, view.Y, view.Width, view.Height);
 			UIView nativeView = ConvertFormsToNative(view, nativeViewSize);
@@ -43,19 +45,21 @@ namespace XFScrollviewAnimations.Plugin
 
 			var animationFrameAngle = Animation.AnimationFrameForTime(time);
 			nativeView.Transform = CGAffineTransform.MakeRotation(animationFrameAngle.Angle);
+
+			return this;
 		}
 
-		public void Transform3DAnimation(AnimatedView view, int time)
+		public Animation Transform3DAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
-			if (animationFrame == null) return;
+			if (animationFrame == null) return this;
 
 			CGRect nativeViewSize = new CGRect(view.X, view.Y, view.Width, view.Height);
 			UIView nativeView = ConvertFormsToNative(view, nativeViewSize);
 
 			AnimationFrame aFrame = (AnimationFrame)Animation.AnimationFrameForTime(time);
 			if (aFrame.Transform == null)
-				return;
+				return null;
 
 			CATransform3D transform = CATransform3D.Identity;
 			transform.m34 = aFrame.Transform.M34;
@@ -92,13 +96,15 @@ namespace XFScrollviewAnimations.Plugin
 			//				aFrame.Transform.Translate.Tz);
 
 			nativeView.Layer.Transform = transform;
+
+			return this;
 		}
 
 
-		public void TransformAnimation(AnimatedView view, int time)
+		public Animation TransformAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
-			if (animationFrame == null) return;
+			if (animationFrame == null) return null;
 
 			CGRect nativeViewSize = new CGRect(view.X, view.Y, view.Width, view.Height);
 			UIView nativeView = ConvertFormsToNative(view, nativeViewSize);
@@ -110,39 +116,47 @@ namespace XFScrollviewAnimations.Plugin
 
 			// Reset rotation to 0 to avoid warping
 			nativeView.Transform = CGAffineTransform.MakeRotation(0);
-			nativeView.Frame = animationFrameTranform.Frame;
+			var nativeFrameSize = new CGRect(animationFrameTranform.xPosition,animationFrameTranform.yPosition, animationFrameTranform.frameSize.Width, animationFrameTranform.frameSize.Height);
+			nativeView.Frame = nativeFrameSize;
 
 			// Return to original transform
 			nativeView.Transform = tempTransform;
+
+			return this;
 		}
 
-		public void ColorAnimation(AnimatedView view, int time)
+		public Animation ColorAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
-			if (animationFrame == null) return;
+			if (animationFrame == null) return null;
 
-			CGRect nativeViewSize = new CGRect(view.X, view.Y, view.Width, view.Height);
-			UIView nativeView = ConvertFormsToNative(view, nativeViewSize);
+			var nativeViewSize = new CGRect(view.X, view.Y, view.Width, view.Height);
+			var nativeView = ConvertFormsToNative(view, nativeViewSize);
 
 
 			AnimationFrame colorAnimationFrame = Animation.AnimationFrameForTime(time) as AnimationFrame;
-			nativeView.BackgroundColor = colorAnimationFrame.Color;
+			var nativeColor = colorAnimationFrame.frameColor.ToUIColor();
+			nativeView.BackgroundColor = nativeColor;
+
+			return this;
 		}
 
-		public void HideAnimation(AnimatedView view, int time)
+		public Animation HideAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
-			if (animationFrame == null) return;
+			if (animationFrame == null) return null;
 
 			CGRect nativeViewSize = new CGRect(view.X, view.Y, view.Width, view.Height);
 			UIView nativeView = ConvertFormsToNative(view, nativeViewSize);
 			nativeView.Hidden = animationFrame.Hidden;
+
+			return this;
 		}
 
-		public void ScaleAnimation(AnimatedView view, int time)
+		public Animation ScaleAnimation(AnimatedView view, int time)
 		{
 			var animationFrame = Animation.CountKeyFrames(time);
-			if (animationFrame == null) return;
+			if (animationFrame == null) return null;
 
 			CGRect nativeViewSize = new CGRect(view.X, view.Y, view.Width, view.Height);
 			UIView nativeView = ConvertFormsToNative(view, nativeViewSize);
@@ -150,6 +164,8 @@ namespace XFScrollviewAnimations.Plugin
 			AnimationFrame scaleAnimationFrame = (AnimationFrame)Animation.AnimationFrameForTime(time);
 			float scale = scaleAnimationFrame.Scale;
 			nativeView.Transform = CGAffineTransform.MakeScale(scale, scale);
+
+			return this;
 		}
 
 		/// <summary>
@@ -250,14 +266,14 @@ namespace XFScrollviewAnimations.Plugin
 			float startRed = 0.0f, startBlue = 0.0f, startGreen = 0.0f, startAlpha = 0.0f;
 			float endRed = 0.0f, endBlue = 0.0f, endGreen = 0.0f, endAlpha = 0.0f;
 
-			if (GetRed(startRed, startGreen, startBlue, startAlpha, startKeyFrame.Color) &&
-				GetRed(endRed, endGreen, endBlue, endAlpha, endKeyFrame.Color))
+			if (GetRed(startRed, startGreen, startBlue, startAlpha, startKeyFrame.frameColor.ToUIColor()) &&
+			    GetRed(endRed, endGreen, endBlue, endAlpha, endKeyFrame.frameColor.ToUIColor()))
 			{
 				float red = Animation.TweenValueForStartTime(startKeyFrame.Time, endKeyFrame.Time, startRed, endRed, time);
 				float green = Animation.TweenValueForStartTime(startKeyFrame.Time, endKeyFrame.Time, startGreen, endGreen, time);
 				float blue = Animation.TweenValueForStartTime(startKeyFrame.Time, endKeyFrame.Time, startBlue, endBlue, time);
 				float alpha = Animation.TweenValueForStartTime(startKeyFrame.Time, endKeyFrame.Time, startAlpha, endAlpha, time);
-				animationFrame.Color = UIColor.FromRGBA(red, green, blue, alpha);
+				animationFrame.frameColor = Xamarin.Forms.Color.FromRgba(red, green, blue, alpha);
 			}
 
 			return animationFrame;
@@ -304,8 +320,8 @@ namespace XFScrollviewAnimations.Plugin
 
 			int startTime = startKeyFrame.Time;
 			int endTime = endKeyFrame.Time;
-			CGRect startLocation = startKeyFrame.Frame;
-			CGRect endLocation = endKeyFrame.Frame;
+			CGRect startLocation = new CGRect(startKeyFrame.xPosition, startKeyFrame.yPosition, startKeyFrame.frameSize.ToSizeF().Width, startKeyFrame.frameSize.ToSizeF().Height);
+			CGRect endLocation = new CGRect(endKeyFrame.xPosition, endKeyFrame.yPosition, endKeyFrame.frameSize.ToSizeF().Width, endKeyFrame.frameSize.ToSizeF().Height);
 
 			CGRect nativeViewSize = new CGRect(view.X, view.Y, view.Width, view.Height);
 			UIView nativeView = ConvertFormsToNative(view, nativeViewSize);
@@ -319,7 +335,9 @@ namespace XFScrollviewAnimations.Plugin
 					Animation.TweenValueForStartTime(startTime, endTime, (Single)startLocation.Height, (Single)endLocation.Height, time));
 
 			AnimationFrame animationFrame = new AnimationFrame();
-			animationFrame.Frame = frame;
+			animationFrame.xPosition = (int)nativeView.Center.X;
+			animationFrame.yPosition = (int)nativeView.Center.Y;
+			animationFrame.frameSize = new Xamarin.Forms.Size(frame.Width, frame.Height);
 
 			return animationFrame;
 		}
@@ -345,5 +363,36 @@ namespace XFScrollviewAnimations.Plugin
 			return animationFrame;
 		}
 
+        #region IDisposable implementation
+        /// <summary>
+        /// Dispose of class and parent classes
+        /// </summary>
+        public void Dispose()
+		{
+			Dispose(true);
+			GC.SuppressFinalize(this);
+		}
+
+		/// <summary>
+		/// Dispose up
+		/// </summary>
+		private bool disposed = false;
+		/// <summary>
+		/// Dispose method
+		/// </summary>
+		/// <param name="disposing"></param>
+		public virtual void Dispose(bool disposing)
+		{
+			if (!disposed)
+			{
+				if (disposing)
+				{
+					//dispose only
+				}
+
+				disposed = true;
+			}
+		}
+		#endregion
 	}
 }

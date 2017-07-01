@@ -7,7 +7,7 @@ namespace XFScrollviewAnimations.Plugin
 	/// <summary>
 	/// Scroll view animations.
 	/// </summary>
-    public class ScrollViewAnimations : IXFScrollviewAnimations
+    public class ScrollViewAnimations : Abstractions.Animation, IXFScrollviewAnimations
     {
 		/// <summary>
 		/// Adds the view.
@@ -16,21 +16,22 @@ namespace XFScrollviewAnimations.Plugin
 		/// <param name="height">Height.</param>
 		/// <param name="positionX">Position x.</param>
 		/// <param name="positionY">Position y.</param>
-        public void AddView(double width, double height, double positionX, double positionY)
-		{
-		}
-
-		public void AlphaAnimation(AnimatedView view, int time)
+        public Abstractions.Animation AddView(double width, double height, double positionX, double positionY)
 		{
 			throw new NotImplementedException();
 		}
 
-		public void AngleAnimation(AnimatedView view, int time)
+		public Abstractions.Animation AlphaAnimation(AnimatedView view, int time)
 		{
 			throw new NotImplementedException();
 		}
 
-		public void ColorAnimation(AnimatedView view, int time)
+		public Abstractions.Animation AngleAnimation(AnimatedView view, int time)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Abstractions.Animation ColorAnimation(AnimatedView view, int time)
 		{
 			throw new NotImplementedException();
 		}
@@ -70,25 +71,58 @@ namespace XFScrollviewAnimations.Plugin
 			throw new NotImplementedException();
 		}
 
-		public void HideAnimation(AnimatedView view, int time)
+		public Abstractions.Animation HideAnimation(AnimatedView view, int time)
 		{
 			throw new NotImplementedException();
 		}
 
-		public void ScaleAnimation(AnimatedView view, int time)
+		public Abstractions.Animation ScaleAnimation(AnimatedView view, int time)
 		{
 			throw new NotImplementedException();
 		}
 
-		public void Transform3DAnimation(AnimatedView view, int time)
+		public Abstractions.Animation Transform3DAnimation(AnimatedView view, int time)
 		{
 			throw new NotImplementedException();
 		}
 
-		public void TransformAnimation(AnimatedView view, int time)
+		public Abstractions.Animation TransformAnimation(AnimatedView view, int time)
 		{
 			throw new NotImplementedException();
 		}
+
+
+        #region IDisposable implementation
+        /// <summary>
+        /// Dispose of class and parent classes
+        /// </summary>
+        public void Dispose()
+		{
+			Dispose(true);
+			GC.SuppressFinalize(this);
+		}
+
+		/// <summary>
+		/// Dispose up
+		/// </summary>
+		private bool disposed = false;
+		/// <summary>
+		/// Dispose method
+		/// </summary>
+		/// <param name="disposing"></param>
+		public virtual void Dispose(bool disposing)
+		{
+			if (!disposed)
+			{
+				if (disposing)
+				{
+					//dispose only
+				}
+
+				disposed = true;
+			}
+		}
+		#endregion
 	}
 }
 

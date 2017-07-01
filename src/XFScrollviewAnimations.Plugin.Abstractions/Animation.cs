@@ -37,7 +37,7 @@ namespace XFScrollviewAnimations.Plugin.Abstractions
 			}
 		}
 
-		public static void AddKeyFrame(AnimationFrameBase keyFrame)
+		public void AddKeyFrame(AnimationFrameBase keyFrame)
 		{
 
 			Debug.WriteLine(string.Format("Add KeyFrame Time: {0}", keyFrame.Time));

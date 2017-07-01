@@ -9,6 +9,7 @@
     <RootNamespace>XFScrollViewSample.iOS</RootNamespace>
     <AssemblyName>XFScrollViewSample.iOS</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -100,6 +101,12 @@
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.2.3.3.193\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="XFScrollviewAnimations.Plugin.Abstractions">
+      <HintPath>..\..\packages\HexisSoftware.Plugins.XFScrollviewAnimations.1.0.0\lib\Xamarin.iOS10\XFScrollviewAnimations.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="XFScrollviewAnimations.Plugin">
+      <HintPath>..\..\packages\HexisSoftware.Plugins.XFScrollviewAnimations.1.0.0\lib\Xamarin.iOS10\XFScrollviewAnimations.Plugin.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
